@@ -5,4 +5,4 @@ before_install:
   - docker build -t bindian0509/docker-react -f Dockerfile.dev . 
 
 script:
-  - docker run bindian0509/docker-react npm run test -- --coverage
+  - docker run  -e CI=true bindian0509/docker-react npm run test -- --coverage
