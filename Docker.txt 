@@ -8,3 +8,42 @@
     bharat/frontend 
 
 # this is the new way of running a react app container 
+git pull origin master --allow-unrelated-histories
+
+
+# run the container from an image | first time | non detached mode | ctl+c will kill it
+docker container run -it alpine bash
+docker container run -it alpine sh
+
+
+# plugging in to a running docker container via name
+docker container exec -it alpine bash
+
+
+# running a new container in a detached mode with port specification to 80:80 on both container and host with a name called proxy of type nginx
+docker container run -d --name proxy -p 80:80 nginx
+
+# inspect ip from the container named mongodb
+docker container inspect mongodb | grep -i ip
+
+# to connect to mysql using bash mode
+docker container exec -it mysql bash
+
+
+# building from docker file tagged name
+
+docker build -t bharat/simpleweb .
+
+
+# running it with port internal and external
+docker run -p 5000:8080 bharat/simpleweb
+docker run -p 8090:8080 bharat/simpleweb
+
+
+
+# docker compose
+
+docker-compose up
+docker-compose up -d
+docker ps
+docker-compose down
