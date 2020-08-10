@@ -10,8 +10,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
           I know you won't do that ... Biaatch!<br></br>
-          Breaking Bad!!! 
-          <b>ddddd</b>
+          
+          <b>Breaking Bad!!! </b>
         </p>
         <a
           className="App-link"
