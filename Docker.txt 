@@ -1,3 +1,4 @@
+ 
  docker run \
     -it \
     --rm \
@@ -9,6 +10,13 @@
 
 # this is the new way of running a react app container 
 git pull origin master --allow-unrelated-histories
+
+
+
+Found that the docker run command should contain -e CI=true to exit immediately:
+
+docker run -e CI=true myimage npm run test
+From React documentation about "CI=true":
 
 
 # run the container from an image | first time | non detached mode | ctl+c will kill it
